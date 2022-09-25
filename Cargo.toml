@@ -3,6 +3,12 @@ name = "blog_os"
 version = "0.1.0"
 edition = "2018"
 
+[package.metadata.bootimage]
+build-command = ["xbuild"]
+
+[build]
+target = "aarch64-blog_os.json"
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [profile.dev]
@@ -13,3 +19,8 @@ panic = "abort"
 
 
 [dependencies]
+rustboot = "*"
+
+
+
+
